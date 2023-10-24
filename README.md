@@ -24,7 +24,6 @@ N/A - This project is still in development
 - CSS
 - JS
 - TailwindCSS
-- React.JS
 
 ## Support 
 

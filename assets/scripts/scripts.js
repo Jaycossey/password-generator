@@ -27,6 +27,20 @@ let finalPassword;
 
 
 // FUNCTION DECLARATIONS ---------------------------------------
+// validate length is correct
+function validateLength() {
+    INPUT.style.boxShadow = "0 0 0";
+    // if length is correct, generate password
+    if (INPUT.value >= 16 && INPUT.value <= 32) {
+        desiredLength = INPUT.value;
+        generate(desiredLength);
+    // else alert user
+    } else {
+        INPUT.style.boxShadow = "5px 5px 5px red";
+        return;
+    } 
+}
+
 // generate dependant on length
 function generate(length) {
     // assign empty array
@@ -40,13 +54,14 @@ function generate(length) {
         if (randomAscii >= 90 && randomAscii <= 96) {
             randomAscii += 7;
         }
+        // push character to array
         characterArray.push(String.fromCharCode(randomAscii));
     }
-
+    // ensure password meets requirements
     validate();
 }
 
-// validate the password strength
+// validate the password with regex
 function validate() {
     // create temporary string to validate with regex
     let tempString = "";
@@ -68,9 +83,13 @@ function validate() {
 
 // display the password on screen after generation
 function displayPassword() {
-    console.log("create cool text animation: " + finalPassword);
+    TEXT_DISPLAY.innerText = "Your new password is: \n";
+    for (let i = 0; i < finalPassword.length; i++) {
+        setTimeout(() => {
+            TEXT_DISPLAY.innerText += finalPassword[i];
+        }, i * 40);
+    }
 }
 
 
-// FUNCTION CALLS ------------------------------------------------
-generate(desiredLength);
+// FUNCTION CALLS AND EVENT HANDLERS ------------------------------

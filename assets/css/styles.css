@@ -34,7 +34,7 @@ p {
 
 /* input field styles */
 input {
-    width: 300px;
+    width: 80%;
     height: 50px;
     border: 4px outset var(--border-color);
     text-align: center;
@@ -47,6 +47,8 @@ button {
     border-radius: 20px;
     box-shadow: 0px 5px 5px gray;
     border: 4px outset var(--border-color);
+    transition: smooth;
+    transition-duration: 0.1s;
 }
 
 /* margins */
@@ -54,4 +56,10 @@ button {
 #length-input,
 #generate {
     margin: 20px;
+}
+
+/* Button animations */
+#generate:hover {
+    transform: scale(105%);
+    cursor: pointer;
 }

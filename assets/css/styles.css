@@ -63,3 +63,9 @@ button {
     transform: scale(105%);
     cursor: pointer;
 }
+
+@media (min-width: 320px) and (max-width: 780px) {
+    p {
+        font-size: 0.8rem;
+    }
+}

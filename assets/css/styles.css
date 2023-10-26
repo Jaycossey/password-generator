@@ -1,3 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --bg-color-1: #892889;
+    --border-color: #5B045B;
+    --radial-1: radial-gradient(#EAE0EA, #986298, #fff);
+}
+
+body {
+    background-color: var(--bg-color-1);
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.uiBg {
+    width: 75vw;
+    height: 75vh;
+    border: 8px inset var(--border-color);
+    border-radius: 50px;
+    background-image: var(--radial-1);
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 2rem;
+}
+
+input {
+    width: 300px;
+    height: 50px;
+    border: 4px outset var(--border-color);
+    text-align: center;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px gray;
+    border: 4px outset var(--border-color);
+}
+
+#instructions,
+#length-input,
+#generate {
+    margin: 20px;
+}

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
     <link rel="icon" href="./assets/images/manadacrystal.png">
-    <link rel="stylesheet" href="./dist/output.css">
 </head>
 <body>
-    <main id="container" class="w-screen h-screen bg-purple-500">
-        <section class=" border-4 border-black"></section>
+    <main class="uiBg">
+        <div id="ui-container">
+            <p id="instructions">Input desired length then hit "Generate"!</p>
+            <input id="length-input" type="number" placeholder="Choose a number between 8 - 16"></input>
+            <button id="generate" type="button">Generate!</button>
+        </div>
     </main>
 </body>
 </html>

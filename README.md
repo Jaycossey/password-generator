@@ -23,7 +23,6 @@ N/A - This project is still in development
 - HTML 
 - CSS
 - JS
-- TailwindCSS
 
 ## Support 
 
